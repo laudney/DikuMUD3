@@ -33,6 +33,9 @@
 namespace mplex
 {
 
+// Import global namespace functions used in this file
+using ::g_CaptainHook;
+
 char g_mudname[50] = "the MUD server (via DikuMUD Mplex)";
 int g_bHadAlarm = FALSE;
 arg_type g_mplex_arg;

@@ -37,6 +37,16 @@
 namespace mplex
 {
 
+// Import global namespace functions and types used in this file
+using ::protocol_send_mplex_info;
+using ::protocol_send_host;
+using ::protocol_send_close;
+using ::protocol_parse_incoming;
+using ::cQueueElem;
+using ::cHook;
+using ::g_CaptainHook;
+using ::is_in;
+
 color_type g_cDefcolor;
 int g_nConnectionsLeft = -1;
 

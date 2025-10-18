@@ -64,6 +64,22 @@
 namespace mplex
 {
 
+// Import global namespace functions and types used in this file
+using ::protocol_send_request;
+using ::protocol_send_close;
+using ::protocol_send_text;
+using ::skip_blanks;
+using ::skip_spaces;
+using ::strip_trailing_spaces;
+using ::getHTMLTag;
+using ::getHTMLValue;
+using ::str_next_word;
+using ::str_is_empty;
+using ::cQueueElem;
+using ::cHook;
+using ::g_CaptainHook;
+using ::MIN;
+
 cConHook *g_connection_list = nullptr;
 
 void dumbPlayLoop(cConHook *con, const char *cmd)

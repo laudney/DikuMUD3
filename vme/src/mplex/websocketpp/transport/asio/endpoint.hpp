@@ -556,11 +556,10 @@ public:
     void listen(std::string const & host, std::string const & service,
         lib::error_code & ec)
     {
-        using lib::asio::ip::tcp;
-        tcp::resolver r(*m_io_service);
-        tcp::resolver::query query(host, service);
-        tcp::resolver::iterator endpoint_iterator = r.resolve(query);
-        tcp::resolver::iterator end;
+        lib::asio::ip::tcp::resolver r(*m_io_service);
+        lib::asio::ip::tcp::resolver::query query(host, service);
+        lib::asio::ip::tcp::resolver::iterator endpoint_iterator = r.resolve(query);
+        lib::asio::ip::tcp::resolver::iterator end;
         if (endpoint_iterator == end) {
             m_elog->write(log::elevel::library,
                 "asio::listen could not resolve the supplied host or service");
@@ -987,8 +986,10 @@ protected:
             std::stringstream s;
             s << "Async DNS resolve successful. Results: ";
 
-            lib::asio::ip::tcp::resolver::iterator it, end;
-            for (it = iterator; it != end; ++it) {
+            lib::asio::ip::tcp::resolver::iterator it = iterator;
+            lib::asio::ip::tcp::resolver::iterator end;
+
+            for (; it != end; ++it) {
                 s << (*it).endpoint() << " ";
             }
 

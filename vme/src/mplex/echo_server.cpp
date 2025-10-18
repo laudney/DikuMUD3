@@ -15,6 +15,9 @@ using websocketpp::lib::placeholders::_2;
 namespace mplex
 {
 
+// Import global namespace functions used in this file
+using ::str_correct_utf8;
+
 // pull out the type of messages sent by our config
 typedef wsserver::message_ptr message_ptr;
 

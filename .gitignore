@@ -18,3 +18,11 @@ Testing/
 unit_tests/CTestTestfile.cmake
 core.*
 gmon.out
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+vme/src/Doxyfile.vme_docs
+vme/src/defcomp/Doxyfile.defcomp_docs
+vme/src/mplex/Doxyfile.mplex_docs
+vme/src/vmc/Doxyfile.vmc_docs
+vme/lib/competition/
+vme.log

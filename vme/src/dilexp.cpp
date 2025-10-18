@@ -62,6 +62,7 @@ $Revision: 2.18 $
 
 #include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/path.hpp>
+#include <boost/filesystem.hpp>
 #include <boost/regex.hpp>
 
 /* ************************************************************************ */
